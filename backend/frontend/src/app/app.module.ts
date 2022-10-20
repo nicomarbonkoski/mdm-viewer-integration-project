@@ -8,11 +8,19 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import {  MatSidenavModule  } from '@angular/material/sidenav';
 import { MatListModule } from'@angular/material/list';
 import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
+import { TabelaComponent } from './tabela/tabela.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { TelaComponent } from './tela/tela.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    HeaderComponent,
+    TabelaComponent,
+    SidenavComponent,
+    TelaComponent,
   ],
   imports: [
     BrowserModule,
