@@ -12,6 +12,12 @@ import { HeaderComponent } from './header/header.component';
 import { TabelaComponent } from './tabela/tabela.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { TelaComponent } from './tela/tela.component';
+import { MenuComponent } from './menu/menu.component';
+import {MatCardModule}from'@angular/material/card';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { UserDropdownComponent } from './sidenav/user-dropdown/user-dropdown.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -21,6 +27,9 @@ import { TelaComponent } from './tela/tela.component';
     TabelaComponent,
     SidenavComponent,
     TelaComponent,
+    MenuComponent,
+    UsuariosComponent,
+    UserDropdownComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +39,9 @@ import { TelaComponent } from './tela/tela.component';
 
     MatListModule,
     MatSidenavModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
