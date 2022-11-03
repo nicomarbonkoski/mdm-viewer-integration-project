@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.catolicasc.entities.Cliente;
 
-public interface ClienteRepository extends JpaRepository<Cliente, Integer> {	
+public interface ClienteRepository extends JpaRepository<Cliente, String> {	
 
       /**
        * Encontra todos os clientes inadimplentes.

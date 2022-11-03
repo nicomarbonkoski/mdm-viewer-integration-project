@@ -29,7 +29,7 @@ public class ClienteService {
         return repo.findByCpf(cpf);
     }
      
-    public void delete(Integer id) {
-        repo.deleteById(id);
+    public void delete(String cpf) {
+        repo.deleteById(cpf);
     }
 }

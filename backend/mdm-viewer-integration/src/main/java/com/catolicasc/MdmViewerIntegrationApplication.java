@@ -8,7 +8,7 @@ public class MdmViewerIntegrationApplication {
  
     public static void main(String[] args) {
         SpringApplication.run(MdmViewerIntegrationApplication.class, args);
-        System.out.println("rodou em");
+        System.out.println("Sistema inicializado com sucesso.");
     }
  
 }
