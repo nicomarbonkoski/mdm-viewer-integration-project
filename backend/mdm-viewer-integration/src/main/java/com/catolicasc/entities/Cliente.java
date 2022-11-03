@@ -20,8 +20,7 @@ public class Cliente {
 	@Column(name="tipoconsumidor", nullable=false) // Se eu coloco o name="" em camelCase o código não funciona por algum motivo
 	private String tipoConsumidor;
  
-    public Cliente() {
-    }
+    public Cliente() {}
  
     public Cliente(String cpf, String senha, String nome, boolean inadimplente, String tipoConsumidor) {
     	
