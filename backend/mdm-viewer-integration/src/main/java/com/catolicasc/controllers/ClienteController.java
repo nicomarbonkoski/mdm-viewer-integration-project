@@ -20,14 +20,14 @@ public class ClienteController {
     
     @GetMapping("/clientes")
     public List<Cliente> list() {
-    	System.out.println("Metodo get em /clientes");
+    	System.out.println("Metodo GET em /clientes");
     	// Retorna uma lista com todos os clientes
         return service.listAll();
     }
     
     @GetMapping("/clientes/{cpf}")
     public ResponseEntity<Cliente> get(@PathVariable String cpf) {
-    	System.out.println("Metodo get em /clientes/cpf");
+    	System.out.println("Metodo GET em /clientes/"+cpf);
         try {
             Cliente cliente = service.get(cpf);
             // Retorna apenas o cliente com o cpf indicado
@@ -42,7 +42,7 @@ public class ClienteController {
     
     @PostMapping("/clientes")
     public void add(@RequestBody Cliente cliente) {
-    	System.out.println("Método post em /clientes");
+    	System.out.println("Método POST em /clientes");
         service.save(cliente);
     }
     
@@ -51,20 +51,20 @@ public class ClienteController {
     @PutMapping("/clientes/{cpf}")
     public ResponseEntity<?> update(@RequestBody Cliente cliente, @PathVariable String cpf) {
         try {
-        	System.out.println("Método update em /clientes/cpf");
-//            Cliente existeCliente = service.get(cpf); // No guia essa linha de código existia, mas ela não afeta em nada o funcionamento
+            System.out.println("Método PUT/update em /medidores/"+cpf);
+            cliente.setCpf(service.get(cpf).getCpf()); // Seta o cpf do medidor que será atualizado como o que está sendo recebido na URL
             service.save(cliente);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (NoSuchElementException e) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }      
+        }
     }
      
     // RESTful API method for Delete operation
     
     @DeleteMapping("/clientes/{cpf}")
     public void delete(@PathVariable String cpf) {
-    	System.out.println("Metodo delete /clientes/cpf");
+    	System.out.println("Metodo DELETE /clientes/"+cpf);
         service.delete(cpf);
     }
 }

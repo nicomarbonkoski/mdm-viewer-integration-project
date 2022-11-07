@@ -20,14 +20,14 @@ public class MedidorController {
     
     @GetMapping("/medidores")
     public List<Medidor> list() {
-    	System.out.println("Metodo get em /medidores");
+    	System.out.println("Metodo GET em /medidores");
     	// Retorna uma lista com todos os medidores
         return service.listAll();
     }
     
     @GetMapping("/medidores/{id}")
     public ResponseEntity<Medidor> get(@PathVariable int id) {
-    	System.out.println("Metodo get em /medidores/id");
+    	System.out.println("Metodo GET em /medidores/id");
         try {
             Medidor medidor = service.get(id);
             // Retorna apenas o medidor com o id
@@ -42,7 +42,7 @@ public class MedidorController {
     
     @PostMapping("/medidores")
     public void add(@RequestBody Medidor medidor) {
-    	System.out.println("Método post em /medidores");
+    	System.out.println("Método POST em /medidores");
         service.save(medidor);
     }
     
@@ -51,8 +51,8 @@ public class MedidorController {
     @PutMapping("/medidores/{id}")
     public ResponseEntity<?> update(@RequestBody Medidor medidor, @PathVariable int id) {
         try {
-        	System.out.println("Método update em /medidores/id");
-//            Medidor existeMedidor = service.get(id); // No guia essa linha de código existia, mas ela não afeta em nada o funcionamento
+        	System.out.println("Método PUT/update em /medidores/"+id);
+            medidor.setId(service.get(id).getId()); // Seta o id do medidor que será atualizado como o que está sendo recebido na URL
             service.save(medidor);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (NoSuchElementException e) {
@@ -64,7 +64,7 @@ public class MedidorController {
     
     @DeleteMapping("/medidores/{id}")
     public void delete(@PathVariable int id) {
-    	System.out.println("Metodo delete /medidores/id");
+    	System.out.println("Metodo DELETE /medidores/id");
         service.delete(id);
     }
 }
