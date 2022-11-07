@@ -1,23 +1,29 @@
 package com.catolicasc.entities;
  
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
  
 @Entity
-public class Cliente {
 
+public class Cliente {
+	@Id
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="cpf", nullable=false)
 	private String cpf;
+	@Column(name="senha", nullable=false)
 	private String senha;
+	@Column(name="nome", nullable=false)
 	private String nome;
+	@Column(name="inadimplente", nullable=false)
 	private boolean inadimplente;
+	@Column(name="tipoconsumidor", nullable=false) // Se eu coloco o name="" em camelCase o código não funciona por algum motivo
 	private String tipoConsumidor;
  
-    public Cliente() {
-    }
+    public Cliente() {}
  
     public Cliente(String cpf, String senha, String nome, boolean inadimplente, String tipoConsumidor) {
+    	
     	this.cpf = cpf;
     	this.senha = senha;
     	this.nome = nome;
@@ -25,8 +31,6 @@ public class Cliente {
     	this.tipoConsumidor = tipoConsumidor;
     }
  
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public String getCpf() {
         return cpf;
     }
