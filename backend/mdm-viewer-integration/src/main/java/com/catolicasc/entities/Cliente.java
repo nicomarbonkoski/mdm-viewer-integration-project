@@ -23,7 +23,6 @@ public class Cliente {
     public Cliente() {}
  
     public Cliente(String cpf, String senha, String nome, boolean inadimplente, String tipoConsumidor) {
-    	
     	this.cpf = cpf;
     	this.senha = senha;
     	this.nome = nome;
