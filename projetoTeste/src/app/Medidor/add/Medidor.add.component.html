@@ -1,0 +1,39 @@
+<div class="container col-md-6 mt-3">
+    <div class="card">
+      <div class="card-header">
+        <h3>Adicionar Medidores</h3>
+      </div>
+      <div class="card-body"style="">
+        <form action="">
+    <div class="form-group">
+        <label for="">Data da medicao</label>
+        <input type="date" class="form-control" [(ngModel)]="medidor.dataMedicao" name="dataMedicao" >
+      </div>
+          <div class="form-group">
+            <label for="">Voltagem</label>
+            <input type="number" class="form-control" [(ngModel)]="medidor.voltagem" name="voltagem" placeholder="Informe a voltagem do medidor">
+          </div>
+          <div class="form-group">
+            <label for="">Consumo</label>
+            <input type="text" class="form-control" [(ngModel)]="medidor.consumo" name="consumo" placeholder="Informe o consumo do medidor">
+          </div>
+          <div class="form-group">
+            <label for="">Temperatura</label>
+            <input type="text" class="form-control" [(ngModel)]="medidor.temperatura" name="temperatura" placeholder="Informe a temperatura do medidor">
+          </div>
+          <div class="form-group">
+            <label for="">CPF do titular</label>
+            <input type="text" class="form-control" [(ngModel)]="medidor.cpfTitular" name="cpfTitular" placeholder="Informe o CPF do titular deste medidor" maxlength="11" size="11">
+          </div>
+          <div class="form-group mt-3 " style=" background-color: rgb(45, 202, 255); color: white; border-radius:10px;padding-left:10px;  display:flex; text-align: center;">
+            <input type="radio" id="inadimplente" [(ngModel)]="medidor.provisionado" name="provisionado" value="True" style="padding-bottom: 10px; ">
+            <label for="Inadimplente()" style="margin-right: 20px; padding-left: 10px;">Provisionado</label><br>
+            <input type="radio" id="notInadimplente" [(ngModel)]="medidor.provisionado" name="Notrprovisionado" value="False">
+            <label for="NotInadimplente()"  style="margin-right: 20px; padding-left: 10px;">Não provisionado</label>
+    </div>
+          <button (click)="salvar()" class="btn btn-danger mt-5 col-md-6">Salvar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

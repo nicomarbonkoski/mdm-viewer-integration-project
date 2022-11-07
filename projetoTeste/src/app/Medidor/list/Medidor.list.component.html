@@ -1,0 +1,38 @@
+<div class="conteiner" style="margin: 20px 20px 0 20px ;" >
+    <div class="card">
+        <div class="card-header">
+            <h3>Medidores</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>provisionado</th>
+                        <th>data da medição</th>
+                        <th>voltagem</th>
+                        <th>consumo</th>
+                        <th>Temperatura</th>
+                        <th>CPF do titular</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Medidor of medidores" class="text-center">
+                        <td>{{Medidor.id}}</td>
+                        <td>{{Medidor.provisionado}}</td>
+                        <td>{{Medidor.dataMedicao}}</td>
+                        <td>{{Medidor.voltagem}}</td>
+                        <td>{{Medidor.consumo}}</td>
+                        <td>{{Medidor.temperatura}}</td>
+                        <td>{{Medidor.cpfTitular}}</td>
+                        <td>
+                            <button class="btn btn-warning" (click)="editar(Medidor)">Editar</button>
+                            <button class="btn btn-danger" (click)="delete(Medidor)" style="margin-left: 10px;">Deletar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>

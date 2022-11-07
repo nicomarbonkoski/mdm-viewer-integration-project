@@ -1,0 +1,21 @@
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <div (click)="Listar()" class="btn btn-info">
+      listar Medidores
+    </div>
+    <div (click)="ListarClientes()" class="btn btn-info" style="margin-left: 10px;">
+      listar Clientes
+    </div>
+    <div (click)="novoCliente()" class="btn btn-info" style="margin-left: 10px;">
+      Novo Cliente
+    </div>
+    <div (click)="novoMedidor()" class="btn btn-info" style="margin-left: 10px;">
+      Novo Medidor
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</body>
