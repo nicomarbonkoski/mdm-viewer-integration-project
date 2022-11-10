@@ -1,0 +1,40 @@
+.sidenav{
+    color: white;
+    height: 100vh;
+}
+.sidenav .container{
+    text-align: left;
+    display: block;
+}
+.sidenav .container .btn{
+    width: 100%;
+    color: white;
+    font-size: larger;
+}
+.sidenav .container .btn:hover{
+    background-color: #d1fbfd;
+    color: black;
+}
+span{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.dropdown{
+    background-color: white;
+    color: #373D3F;
+}
+.dropdown mat-icon{
+    background-color: white;
+    color: #0d6efd;
+}
+
+
+.dropdown:hover {
+    background-color:#0d6efd;
+    color: white;
+}
+.dropdown:hover mat-icon{
+    background-color:transparent;
+    color: white;
+}

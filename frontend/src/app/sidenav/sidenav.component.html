@@ -1,0 +1,38 @@
+<div class=" d-flex flex-column flex-shrink-0  p-3 " style=" background-color: rgb(0, 140, 255);">
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a mat-list-item routerLink="" class="nav-link" aria-current="page" onclick="tornaPrincipal()">
+        Página inicial
+        <script></script>
+      </a>
+    </li>
+    <li>
+      <a mat-list-item routerLink="listagem" class="nav-link ">
+        Medidores
+      </a>
+    </li>
+    <li>
+      <a mat-list-item routerLink="usuarios" class="nav-link">
+        Usuários
+      </a>
+    </li>
+    <li>
+      <a mat-list-item routerLink="" class="nav-link">
+
+        Clientes
+      </a>
+    </li>
+    <li>
+      <a mat-list-item routerLink="" class="nav-link ">
+
+        Equipamentos
+
+      </a>
+    </li>
+  </ul>
+  <hr>
+  <div class="dropdown">
+    <app-user-dropdown></app-user-dropdown>
+  </div>
+</div>

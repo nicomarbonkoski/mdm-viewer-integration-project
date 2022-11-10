@@ -15,18 +15,23 @@ export class ListClienteComponent implements OnInit {
   constructor(private service:ServiceService, private router:Router) { }
 
   ngOnInit():void{
-    this.service.getCliente()
-    .subscribe(data=>{
+    this.service.getCliente().subscribe(data=>{
       this.clientes=data;
     })
+
+    
   }
   editarCliente(cliente:Cliente):void{
     localStorage.setItem("cpf",cliente.cpf.toString());
     this.router.navigate(["Cliente.edit"]);
   }
   delete(cliente:Cliente){
-    this.service.deleteCliente(cliente.cpf).subscribe({});
-    alert("Cliente deletado");
-    location.reload();
+    var retorno = confirm("Todos os dados do CLIENTE "+cliente.nome+" serão deletados.\nTem certeza? ");
+    if (retorno == true) {
+      this.service.deleteCliente(cliente.cpf).subscribe({});
+      alert("Cliente deletado");
+      location.reload();
+      this.router.navigate(['Medidor.list']);
+    } 
   }
 }

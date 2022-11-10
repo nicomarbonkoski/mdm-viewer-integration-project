@@ -1,4 +1,7 @@
-<div class="conteiner " style="margin: 20px 20px 0 20px ;" >
+<body>
+    
+
+<div class="conteiner " >
     <div class="card">
         <div class="card-header">
             <h3>Clientes</h3>
@@ -22,8 +25,8 @@
                         <td>{{Cliente.inadimplente}}</td>
                         <td>{{Cliente.tipoConsumidor}}</td>
                         <td>
-                            <button class="btn btn-warning" (click)="editarCliente(Cliente)">Editar</button>
-                            <button class="btn btn-danger" (click)="delete(Cliente)" style="margin-left: 10px;">Deletar</button>
+                            <button class="button" (click)="editarCliente(Cliente)">Editar</button>
+                            <button class="btn-voltar" (click)="delete(Cliente)" style="margin-left: 10px;">Deletar</button>
                         </td>
                     </tr>
                 </tbody>
@@ -32,3 +35,4 @@
     </div>
     
 </div>
+</body>

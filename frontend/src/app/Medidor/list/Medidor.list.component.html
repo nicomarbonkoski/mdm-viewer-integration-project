@@ -1,4 +1,7 @@
-<div class="conteiner" style="margin: 20px 20px 0 20px ;" >
+<body>
+    
+
+<div class="conteiner" >
     <div class="card">
         <div class="card-header">
             <h3>Medidores</h3>
@@ -20,14 +23,14 @@
                     <tr *ngFor="let Medidor of medidores" class="text-center">
                         <td>{{Medidor.id}}</td>
                         <td>{{Medidor.provisionado}}</td>
-                        <td>{{Medidor.dataMedicao}}</td>
+                        <td >{{Medidor.dataMedicao}}</td>
                         <td>{{Medidor.voltagem}}</td>
                         <td>{{Medidor.consumo}}</td>
                         <td>{{Medidor.temperatura}}</td>
                         <td>{{Medidor.cpfTitular}}</td>
                         <td>
-                            <button class="btn btn-warning" (click)="editar(Medidor)">Editar</button>
-                            <button class="btn btn-danger" (click)="delete(Medidor)" style="margin-left: 10px;">Deletar</button>
+                            <button class="button" (click)="editar(Medidor)">Editar</button>
+                            <button class="btn-voltar" (click)="delete(Medidor)" style="margin-left: 10px;">Deletar</button>
                         </td>
                     </tr>
                 </tbody>
@@ -36,3 +39,4 @@
     </div>
     
 </div>
+</body>

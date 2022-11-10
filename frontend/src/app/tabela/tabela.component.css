@@ -1,0 +1,74 @@
+table .coluna{
+   background-color: rgb(0, 140, 255);
+   border-radius: 10px;
+   color: white;
+}
+
+
+.filtroPesquisa {
+    background-color: rgb(0, 140, 255);
+    width: fit-content;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+.filtroPesquisa a {
+    color: white;
+}
+.order{
+    display: block;
+    width: min-content;
+}
+.top .order button{
+    background-color: rgb(0, 140, 255);
+    border: none;
+    color: white;
+    position: relative;
+}
+.top p{
+    width: auto;
+    position: relative;
+    float: left;
+    display: inline;
+}
+.top .order{
+    position: relative;
+    float: right;
+    display: inline;
+    padding-left: 10px;
+}
+.top .order button:hover{
+    background-color: white;
+    border-radius: 10px;
+    color: rgb(0, 140, 255);
+}
+.top{
+    margin: 50px;
+    border: 1px solid white;
+}
+table{
+    border:  2px solid black;
+    box-shadow:  -1px 1px 3px 1px;
+}
+.tableheader{
+
+    display: flex;
+    vertical-align: middle;
+    margin-top: 50px;
+}
+.tableheader h1{
+    padding-left:15px;
+    float: left;
+}
+
+.tabela{
+    width: auto;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 0%;
+    padding: 10px;
+    height: auto; 
+}

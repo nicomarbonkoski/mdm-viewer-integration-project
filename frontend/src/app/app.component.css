@@ -1,0 +1,13 @@
+app-sidenav{
+    width: 15%;
+}
+router-outlet{
+    width: 85%;
+}
+body{
+    background-color: #d1fbfd;
+    height: 100vh;
+}
+.menu{
+    display: flex;
+}
