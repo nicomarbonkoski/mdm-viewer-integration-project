@@ -16,6 +16,7 @@ import { EditClienteComponent } from './Cliente/edit/Cliente.edit.component';
 import { FormsModule } from '@angular/forms';
 import { ServiceService } from '../app/service/service.service';
 import{HttpClientModule} from '@angular/common/http';
+import { SidenavComponent } from './menu/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import{HttpClientModule} from '@angular/common/http';
    // AddClienteComponent,
     //DeleteClienteComponent,
     EditClienteComponent,
-    AddMedidorComponent
+    AddMedidorComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,

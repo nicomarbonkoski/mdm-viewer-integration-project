@@ -9,18 +9,12 @@ import org.springframework.web.bind.annotation.*;
 
 import com.catolicasc.entities.Cliente;
 import com.catolicasc.service.ClienteService;
-import com.catolicasc.service.MedidorService;
  
-@CrossOrigin(origins = "http://localhost:4200/",maxAge=3600)
-@RequestMapping({"/"})
-
 @RestController
 public class ClienteController {
  
     @Autowired
-    private ClienteService clienteService;
-    @Autowired
-    private MedidorService medidorService;
+    private ClienteService service;
      
     // RESTful API methods for Retrieval operations
     
@@ -28,14 +22,14 @@ public class ClienteController {
     public List<Cliente> list() {
     	System.out.println("Metodo GET em /clientes");
     	// Retorna uma lista com todos os clientes
-        return clienteService.listAll();
+        return service.listAll();
     }
     
     @GetMapping("/clientes/{cpf}")
     public ResponseEntity<Cliente> get(@PathVariable String cpf) {
     	System.out.println("Metodo GET em /clientes/"+cpf);
         try {
-            Cliente cliente = clienteService.get(cpf);
+            Cliente cliente = service.get(cpf);
             // Retorna apenas o cliente com o cpf indicado
             return new ResponseEntity<Cliente>(cliente, HttpStatus.OK);
         } catch (NoSuchElementException e) {
@@ -49,7 +43,7 @@ public class ClienteController {
     @PostMapping("/clientes")
     public void add(@RequestBody Cliente cliente) {
     	System.out.println("Método POST em /clientes");
-        clienteService.save(cliente);
+        service.save(cliente);
     }
     
     // RESTful API method for Update operation
@@ -57,9 +51,9 @@ public class ClienteController {
     @PutMapping("/clientes/{cpf}")
     public ResponseEntity<?> update(@RequestBody Cliente cliente, @PathVariable String cpf) {
         try {
-            System.out.println("Método PUT/update em /clientes/"+cpf);
-            cliente.setCpf(clienteService.get(cpf).getCpf()); // Seta o cpf do medidor que será atualizado como o que está sendo recebido na URL
-            clienteService.save(cliente);
+            System.out.println("Método PUT/update em /medidores/"+cpf);
+            cliente.setCpf(service.get(cpf).getCpf()); // Seta o cpf do medidor que será atualizado como o que está sendo recebido na URL
+            service.save(cliente);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (NoSuchElementException e) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -68,15 +62,9 @@ public class ClienteController {
      
     // RESTful API method for Delete operation
     
-	  @DeleteMapping("/clientes/{cpf}")
-	  public void delete(@PathVariable String cpf) {
-	  	System.out.println("Metodo DELETE /clientes/"+cpf);
-	  	if (medidorService.relacionadoComCpf(cpf)) {
-	  		System.out.println("Não é possível deletar o cliente "+cpf+", este está relacionado com um medidor.");
-	  	}
-	  	else {
-	  		clienteService.delete(cpf);
-	  		System.out.println("Cliente CPF: "+cpf+" deletado com sucesso.");
-	  	}
-	  }
+    @DeleteMapping("/clientes/{cpf}")
+    public void delete(@PathVariable String cpf) {
+    	System.out.println("Metodo DELETE /clientes/"+cpf);
+        service.delete(cpf);
+    }
 }

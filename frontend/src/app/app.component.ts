@@ -10,17 +10,4 @@ export class AppComponent {
   title = 'projetoTeste';
 
   constructor(private router:Router){}
-
-  Listar(){
-    this.router.navigate(["Medidor.list"])
-  }
-  novoCliente(){
-    this.router.navigate(["Cliente.add"])  
-  }
-  novoMedidor(){
-    this.router.navigate(["Medidor.add"])  
-  }
-  ListarClientes(){
-    this.router.navigate(["Cliente.list"])
-  }
 }

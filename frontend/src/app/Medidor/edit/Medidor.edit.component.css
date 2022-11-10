@@ -1,0 +1,59 @@
+body{
+    background-color: #d1fbfd;
+    width: 85vmax;
+}
+
+.conteiner{
+    border: none;
+    height: 100vh;
+}
+.conteiner .card-header{
+    background-color: white;
+    border: none;
+    border-radius: 0;
+    height: 5vh;
+}
+.conteiner .card-body{
+    height: 94vh;
+    border: none;
+    border-radius: 0;
+}
+
+.conteiner .card-body .form-group{
+    margin-top: 1%;
+}
+.conteiner .button{
+    background-color: #0d6efd; 
+    color: white;
+    width: 15%;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.conteiner .btn-voltar{
+    background-color: red; 
+    color: white;
+    width: 15%;
+    border: none;
+    border-radius: 10px;
+}
+.conteiner .btn-voltar:hover{
+    color: red; 
+    background-color: white;
+    border: solid 1px red;
+    border-radius: 10px;
+}
+.conteiner .button:hover{
+    color: #0d6efd; 
+    background-color: white;
+    border: solid 1px #0d6efd;
+    border-radius: 10px;
+}
+.conteiner .select{
+    margin-top: 1%;
+    display: block;
+}
+.conteiner .select label{
+    margin-top: 10px;
+    margin-left: 10px;
+}

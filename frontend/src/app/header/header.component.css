@@ -1,0 +1,16 @@
+.navbar-brand {
+    width: 40%;
+
+}
+.navbar-brand img{
+    width: 100%;
+    margin-left: 60%;
+    
+}
+nav{
+    background-color: rgb(255, 255, 255);
+    height: 7%;
+    border-bottom: 1px  black;
+    box-shadow: 0px 0px 7px 0px;
+    width: 20%;
+}

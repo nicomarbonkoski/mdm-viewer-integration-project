@@ -1,0 +1,19 @@
+.dropdown{
+    background-color: white;
+    color: #373D3F;
+}
+.dropdown mat-icon{
+    background-color: white;
+    color: #0d6efd;
+}
+
+
+.dropdown:hover {
+    background-color:#0d6efd;
+    color: white;
+}
+.dropdown:hover mat-icon{
+    background-color:transparent;
+    color: white;
+}
+

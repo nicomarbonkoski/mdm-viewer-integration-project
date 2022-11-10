@@ -19,4 +19,11 @@ export class EditMedidorComponent implements OnInit {
       this.router.navigate(["Medidor.list"]);
     })
   }
+  voltar(){
+    var retorno = confirm("tem certeza? \nTodos os dados não salvos serão perdidos");
+    if (retorno == true) {
+      alert("retornando ao menu")
+      this.router.navigate(['Medidor.list']);
+    } 
+  }
 }

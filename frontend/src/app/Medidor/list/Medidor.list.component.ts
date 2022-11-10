@@ -23,11 +23,15 @@ export class ListMedidorComponent implements OnInit {
     localStorage.setItem("id",medidor.id.toString());
     this.router.navigate(["Medidor.edit"]);
   }
-  delete(medidor:Medidor):void{
-    this.service.deleteMedidor(medidor.id).subscribe(data =>{ 
+  delete(medidor:Medidor){
+    var retorno = confirm("Todos os dados do MEDIDOR do cliente CPF"+medidor.cpfTitular+" serão deletados.\nTem certeza? ");
+    if (retorno == true) {
+      this.service.deleteMedidor(medidor.id).subscribe({});
       alert("Medidor deletado");
       location.reload();
-    })
+      this.router.navigate(['Medidor.list']);
+    } 
+  }
     
   }
-} 
+

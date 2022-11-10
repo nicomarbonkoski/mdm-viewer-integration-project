@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import com.catolicasc.entities.Medidor;
 import com.catolicasc.service.MedidorService;
  
-@CrossOrigin(origins = "http://localhost:4200/",maxAge=3600)
-@RequestMapping({"/"})
-
 @RestController
 public class MedidorController {
  
@@ -30,7 +27,7 @@ public class MedidorController {
     
     @GetMapping("/medidores/{id}")
     public ResponseEntity<Medidor> get(@PathVariable int id) {
-    	System.out.println("Metodo GET em /medidores/"+id);
+    	System.out.println("Metodo GET em /medidores/id");
         try {
             Medidor medidor = service.get(id);
             // Retorna apenas o medidor com o id
@@ -67,7 +64,7 @@ public class MedidorController {
     
     @DeleteMapping("/medidores/{id}")
     public void delete(@PathVariable int id) {
-    	System.out.println("Metodo DELETE /medidores/"+id);
+    	System.out.println("Metodo DELETE /medidores/id");
         service.delete(id);
     }
 }

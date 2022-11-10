@@ -1,14 +1,19 @@
-<div class="container col-md-6 mt-3">
+<body>
+  
+
+<div class="conteiner">
     <div class="card">
       <div class="card-header">
         <h3>Adicionar Medidores</h3>
       </div>
       <div class="card-body"style="">
-        <form action="">
+    <form action="">
+    <div class="dados">
     <div class="form-group">
+      
         <label for="">Data da medicao</label>
         <input type="date" class="form-control" [(ngModel)]="medidor.dataMedicao" name="dataMedicao" >
-      </div>
+          </div>
           <div class="form-group">
             <label for="">Voltagem</label>
             <input type="number" class="form-control" [(ngModel)]="medidor.voltagem" name="voltagem" placeholder="Informe a voltagem do medidor">
@@ -25,15 +30,18 @@
             <label for="">CPF do titular</label>
             <input type="text" class="form-control" [(ngModel)]="medidor.cpfTitular" name="cpfTitular" placeholder="Informe o CPF do titular deste medidor" maxlength="11" size="11">
           </div>
-          <div class="form-group mt-3 " style=" background-color: rgb(45, 202, 255); color: white; border-radius:10px;padding-left:10px;  display:flex; text-align: center;">
+          <div class=" select " >
             <input type="radio" id="inadimplente" [(ngModel)]="medidor.provisionado" name="provisionado" value="True" style="padding-bottom: 10px; ">
-            <label for="Inadimplente()" style="margin-right: 20px; padding-left: 10px;">Provisionado</label><br>
+            <label for="Inadimplente()">Provisionado</label><br>
             <input type="radio" id="notInadimplente" [(ngModel)]="medidor.provisionado" name="Notrprovisionado" value="False">
-            <label for="NotInadimplente()"  style="margin-right: 20px; padding-left: 10px;">Não provisionado</label>
-    </div>
-          <button (click)="salvar()" class="btn btn-danger mt-5 col-md-6">Salvar</button>
-        </form>
+            <label for="NotInadimplente()">Não provisionado</label>
+          
+          </div>
       </div>
+          <button (click)="salvar()" class="button"style="margin-top: 20px;">Salvar</button>
+          <button (click)="voltar()" class="btn-voltar"style="margin-top: 20px;">voltar</button>
+     </form>
     </div>
   </div>
-  
+</div>
+</body>
