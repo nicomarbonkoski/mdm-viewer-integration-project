@@ -17,6 +17,14 @@ import { FormsModule } from '@angular/forms';
 import { ServiceService } from '../app/service/service.service';
 import{HttpClientModule} from '@angular/common/http';
 import { SidenavComponent } from './menu/sidenav/sidenav.component';
+import { UserDropdownComponent } from './menu/user-dropdown/user-dropdown.component';
+
+// Mat imports
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -30,13 +38,20 @@ import { SidenavComponent } from './menu/sidenav/sidenav.component';
     //DeleteClienteComponent,
     EditClienteComponent,
     AddMedidorComponent,
-    SidenavComponent
+    SidenavComponent,
+    UserDropdownComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    // Mat imports
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule,
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]
