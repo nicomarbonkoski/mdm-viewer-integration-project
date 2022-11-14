@@ -1,13 +1,12 @@
 body{
+    /* width: max-content; */
     background-color: #e7efec;
 }
 .central{
     text-align: center;
-    padding-top: 50px;
-    font-size: large;
-    
-    }
-
+    padding-top: 1%;
+    font-size: 1em;
+}
 #email{
     margin:5px;
 }
@@ -19,18 +18,19 @@ body{
     padding-right: 35%;
 }
 .caixa{
-    margin-top: 25%;
-    border-radius: 10px;
+    /* width: max-content; */
+    margin-top: 5%;
+    border-radius: 2%;
     box-shadow: 1px 1px 5px;
-    padding:  10px 50px 50px 50px;
+    padding:  1% 5% 5% 5%;
     background-color: white;
 
 }
 .caixa img{
     width: 50%;
-    padding-top:20px ;
+    padding-top:5%;
+    padding-bottom: 5%;
     float: center;
-    
 }
 .criarConta{
     padding-bottom: 20px;
@@ -47,16 +47,15 @@ body{
     padding-top: 15px;
     float: left;
 }
-@media screen and (max-width:1000px){
+@media screen and (max-width:1100px){
     .form-signin{
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 25%;
+        padding-right: 25%;
     }
     .caixa{
-
         border-radius: 10px;
         box-shadow: -0px 2px 8px -2px;
-        padding:  10px 20px 0 20px;
+        padding:  0% 3% 0% 3%;
     }
 }
 @media screen and (max-width:300px){
@@ -65,9 +64,9 @@ body{
         padding-right: 10%;
     }
     .caixa{
-
         border-radius: 10px;
         box-shadow: 1px 1px 5px;
-        padding:  10px 10px 0 10px;
+        /* padding:  10px 10px 0 10px; */
+        padding: 0% 2% 0% 2%;
     }
 }

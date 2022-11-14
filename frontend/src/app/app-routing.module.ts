@@ -8,6 +8,7 @@ import { EditClienteComponent } from './Cliente/edit/Cliente.edit.component';
 import { ListClienteComponent } from './Cliente/list/Cliente.list.component';
 import { EditMedidorComponent } from './Medidor/edit/Medidor.edit.component';
 import { LoginComponent } from './login/login.component';
+import { UserinfoComponent } from './userinfo/userinfo.component';
 
 
 const routes: Routes =  [
@@ -17,8 +18,8 @@ const routes: Routes =  [
   {path:'Medidor.add', component: AddMedidorComponent},
   {path:'Cliente.edit', component: EditClienteComponent},
   {path:'Medidor.edit', component: EditMedidorComponent},
-  {path:'LoginComponent', component: LoginComponent}
-  // {path:'userinfo', component: UserinfoComponent}
+  {path:'LoginComponent', component: LoginComponent},
+  {path:'userinfo', component: UserinfoComponent}
 ];
 
 @NgModule({

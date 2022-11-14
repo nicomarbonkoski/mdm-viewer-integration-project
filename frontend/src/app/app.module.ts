@@ -26,6 +26,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserinfoComponent } from './userinfo/userinfo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,11 +41,13 @@ import {MatCardModule} from '@angular/material/card';
     //DeleteClienteComponent,
     EditClienteComponent,
     AddMedidorComponent,
+    UserDropdownComponent,
     SidenavComponent,
-    UserDropdownComponent
+    UserinfoComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
