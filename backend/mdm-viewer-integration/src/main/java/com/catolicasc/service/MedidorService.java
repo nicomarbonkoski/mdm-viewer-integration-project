@@ -16,11 +16,22 @@ public class MedidorService {
  
 	@Autowired
     private MedidorRepository repo;
-     
+    
+	// Lista todos os medidores
     public List<Medidor> listAll() {
         return repo.findAll();
     }
-     
+    
+    // Caso exista um medidor relacionado a um cliente, retorna positivo
+    public boolean relacionadoComCpf(String cpf){
+    	System.out.println("Verificando se cpf "+cpf+" esta relacionado com um medidor.");
+    	if (repo.findByCpfTitular(cpf).isEmpty()) {
+    		return false;
+    	};
+    	return true;
+    }
+    
+    // salva ou atualiza um dado no BD
     public void save(Medidor medidor) {
         repo.save(medidor);
     }
