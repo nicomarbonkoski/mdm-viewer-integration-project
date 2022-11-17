@@ -9,7 +9,12 @@ import org.springframework.web.bind.annotation.*;
 
 import com.catolicasc.entities.Medidor;
 import com.catolicasc.service.MedidorService;
- 
+
+
+@CrossOrigin(origins = "http://localhost:4200/",maxAge=3600)
+@RequestMapping({"/"})
+
+
 @RestController
 public class MedidorController {
  
