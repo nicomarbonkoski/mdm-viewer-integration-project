@@ -1,0 +1,23 @@
+<div class="flex-container">
+    <div>
+        <button mat-icon-button class="userNameButton" [matMenuTriggerFor]="menu">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+        <div class="dropdown">
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item class="dropdown" (click)="showUser()">
+                    <mat-icon>person</mat-icon>
+                    <span>Minhas Informações</span>
+                </button>
+                <button mat-menu-item disabled class="dropdown">
+                    <mat-icon>help</mat-icon>
+                    <span>Ajuda</span>
+                </button>
+                <button mat-menu-item [routerLink]="['/login']" (click)="logout()" class="dropdown">
+                    <mat-icon>exit_to_app</mat-icon>
+                    Sair
+                </button>
+            </mat-menu>
+        </div>
+    </div>
+  </div>

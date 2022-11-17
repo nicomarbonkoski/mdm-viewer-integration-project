@@ -1,0 +1,39 @@
+<body >
+  <div class="conteiner">
+  <div class="card">
+    <div class="card-header">
+      <h3>Adicionar clientes</h3>
+    </div>
+    <div class="card-body"style="">
+      <form action="">
+      <div class="dados">
+        <div class="form-group">
+          <label for="">CPF</label>
+          <input type="text" class="form-control" maxlength="11" size="11" [(ngModel)]="cliente.cpf" name="cpf" placeholder="Digite o CPF do cliente">
+        </div>
+        <div class="form-group">
+          <label for="">Senha</label>
+          <input type="text" class="form-control" [(ngModel)]="cliente.senha" name="senha"placeholder="Digite a senha do cliente">
+        </div>
+        <div class="form-group">
+          <label for="">Nome</label>
+          <input type="text" class="form-control" [(ngModel)]="cliente.nome" name="nome"placeholder="Digite o nome do cliente">
+        </div>
+        <div class="form-group">
+          <label for="">Tipo do consumidor</label>
+          <input type="text" class="form-control" [(ngModel)]="cliente.tipoConsumidor" name="tipoConsumidor" placeholder="Informe o tipo de consumidor">
+        </div>
+        <div class="select ">
+                <input type="radio" id="inadimplente" [(ngModel)]="cliente.inadimplente" name="inadimplente" value="True" >
+                <label for="Inadimplente()">Inadimplente</label><br>
+                <input type="radio" id="notInadimplente" [(ngModel)]="cliente.inadimplente" name="notInadimplente" value="False">
+                <label for="NotInadimplente()">Não inadimplente</label>
+        </div>
+        </div>
+        <button (click)="salvar()" class="button"style="margin-top: 20px;">Salvar</button>
+        <button (click)="voltar()" class="btn-voltar"style="margin-top: 20px;">voltar</button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>

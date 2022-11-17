@@ -3,47 +3,62 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import {  MatSidenavModule  } from '@angular/material/sidenav';
-import { MatListModule } from'@angular/material/list';
-import { LoginComponent } from './login/login.component';
-import { HeaderComponent } from './header/header.component';
-import { TabelaComponent } from './tabela/tabela.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { TelaComponent } from './tela/tela.component';
-import { MenuComponent } from './menu/menu.component';
-import {MatCardModule}from'@angular/material/card';
-import { UsuariosComponent } from './usuarios/usuarios.component';
-import { UserDropdownComponent } from './sidenav/user-dropdown/user-dropdown.component';
+
+import { ListMedidorComponent } from './Medidor/list/Medidor.list.component';
+import { AddClienteComponent } from './Cliente/add/Cliente.add.component';
+import { DeleteMedidorComponent } from './Medidor/delete/Medidor.delete.component';
+import { AddMedidorComponent } from './Medidor/add/Medidor.add.component';
+import { EditMedidorComponent } from './Medidor/edit/Medidor.edit.component';
+import { ListClienteComponent } from './Cliente/list/Cliente.list.component';
+//import { AddClienteComponent } from './Cliente/add/Cliente.add.component';
+//import { DeleteClienteComponent } from './Cliente/delete/Cliente.delete.component';
+import { EditClienteComponent } from './Cliente/edit/Cliente.edit.component';
+import { FormsModule } from '@angular/forms';
+import { ServiceService } from '../app/service/service.service';
+import{HttpClientModule} from '@angular/common/http';
+import { SidenavComponent } from './menu/sidenav/sidenav.component';
+import { UserDropdownComponent } from './menu/user-dropdown/user-dropdown.component';
+
+// Mat imports
 import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserinfoComponent } from './userinfo/userinfo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    HeaderComponent,
-    TabelaComponent,
-    SidenavComponent,
-    TelaComponent,
-    MenuComponent,
-    UsuariosComponent,
+    ListMedidorComponent,
+    AddClienteComponent,
+    DeleteMedidorComponent,
+    EditMedidorComponent,
+    ListClienteComponent,
+   // AddClienteComponent,
+    //DeleteClienteComponent,
+    EditClienteComponent,
+    AddMedidorComponent,
     UserDropdownComponent,
+    SidenavComponent,
+    UserinfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-
-    MatListModule,
-    MatSidenavModule,
-    MatCardModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    // Mat imports
     MatMenuModule,
-    MatIconModule
+    MatButtonModule,
+    MatIconModule,
+    MatGridListModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

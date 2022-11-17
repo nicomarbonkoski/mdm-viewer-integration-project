@@ -1,0 +1,26 @@
+.sidenav{
+    padding-top: 5%;
+    background-color: rgb(0, 140, 255);
+    color: white;
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+}
+.sidenav .container{
+    text-align: left;
+    /* display: block; */
+}
+.sidenav .container .btn{
+    width: 100%;
+    color: white;
+    font-size: larger;
+}
+.sidenav .container .btn:hover{
+    background-color: #d1fbfd;
+    color: black;
+}
+span{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

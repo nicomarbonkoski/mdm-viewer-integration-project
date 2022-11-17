@@ -1,0 +1,28 @@
+.centralizar{
+    padding: 5% 35% 5% 35%;
+    width: 100ch;
+    height: 100vh;
+}
+
+.tela-info{
+    text-align: center;
+    padding-top: 1%;
+    font-size: 1em;
+}
+
+.esquerda {
+    text-align: start;
+}
+
+.example-card {
+    width: 500px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+
+.imagem{
+    padding-left: 30%;
+    padding-right: 30%;
+}
